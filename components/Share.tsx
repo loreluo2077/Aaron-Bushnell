@@ -4,7 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import { useParams, usePathname } from 'next/navigation'
 import { useTranslation } from 'app/[locale]/i18n/client'
-import { fallbackLng, secondLng } from 'app/[locale]/i18n/locales'
+import { fallbackLng, zhLng } from 'app/[locale]/i18n/locales'
 import { LocaleTypes } from 'app/[locale]/i18n/settings'
 
 type ShareProps = { title: string; description?: string; slug: string; className?: string }
@@ -21,7 +21,7 @@ const Share = ({ title, description, slug, className }: ShareProps) => {
   if (locale === fallbackLng) {
     // If locale is fallbackLng, use the second segment
     targetSegment = pathSegments.length >= 2 ? pathSegments[1] : ''
-  } else if (locale === secondLng) {
+  } else if (locale === zhLng) {
     // If locale is secondLng, use the third segment
     targetSegment = pathSegments.length >= 3 ? pathSegments[2] : ''
   }

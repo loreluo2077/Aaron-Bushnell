@@ -1,10 +1,10 @@
 import { MetadataRoute } from 'next'
 import { allBlogs } from 'contentlayer/generated'
 import siteMetadata from '@/data/siteMetadata'
-import { fallbackLng, secondLng } from './i18n/locales'
+import { fallbackLng, zhLng } from './i18n/locales'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const locales = [fallbackLng, secondLng]
+  const locales = [fallbackLng, zhLng]
   const siteUrl = siteMetadata.siteUrl
 
   // blog route for english
@@ -17,9 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // blog route for french (or your own second language)
   const secondBlogRoutes = allBlogs
-    .filter((p) => p.language === secondLng)
+    .filter((p) => p.language === zhLng)
     .map((post) => ({
-      url: `${siteUrl}/${secondLng}/${post.path}`,
+      url: `${siteUrl}/${zhLng}/${post.path}`,
       lastModified: post.lastmod || post.date,
     }))
 
