@@ -21,7 +21,7 @@ export default async function Page({ params: { locale } }: HomeProps) {
       <div className="">
         <div className="hero ">
           <div className="hero-content  flex-col lg:flex-row">
-            <img src="static/images/1.jpeg" className=" rounded-lg shadow-2xl" />
+            <img src="static/images/1.jpeg" className="max-w-sm rounded-lg shadow-2xl" />
             <div className="">
               <p>{t('message1')}</p>
               <p>{t('message2')}</p>
@@ -30,10 +30,10 @@ export default async function Page({ params: { locale } }: HomeProps) {
         </div>
       </div>
       {/* <div className="">介绍</div> */}
-      <div className="mx-auto my-3">
+      <div className="-mt-15 mx-auto">
         <Candle flame={false} size={0.6} />
       </div>
-      <div className="m-auto">
+      <div className="m-auto px-5 text-center">
         <p>{t('lightCandle')}</p>
       </div>
       <div className="m-auto flex justify-center">
