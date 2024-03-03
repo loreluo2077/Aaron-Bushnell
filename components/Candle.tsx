@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 interface CandleProps {
   flame: boolean
-  size: Number
+  size: number
 }
 
 const Candle: React.FC<CandleProps> = ({ flame, size }) => {

@@ -17,7 +17,7 @@ export default async function Page({ params: { locale } }: AboutProps) {
       <p>{t('about5')}</p>
 
       <div className="container prose mx-auto mt-20 px-4"></div>
-      <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+      <footer className="footer footer-center rounded bg-base-200 p-10 text-base-content">
         <aside>
           <p>Copyright © 2024 - {t('about6')}</p>
         </aside>

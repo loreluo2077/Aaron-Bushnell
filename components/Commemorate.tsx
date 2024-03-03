@@ -12,7 +12,7 @@ export default function Commemorate() {
     <>
       <button
         className="btn btn-outline btn-secondary"
-        onClick={() => document.getElementById('my_modal_2').showModal()}
+        onClick={() => (document.getElementById('my_modal_2') as HTMLDialogElement)!.showModal()}
       >
         {t('commemorate')}
       </button>
@@ -22,11 +22,11 @@ export default function Commemorate() {
           <form method="dialog" className="flex flex-col items-center">
             {/* if there is a button in form, it will close the modal */}
             <textarea
-              className="textarea  textarea-md textarea-bordered min-h-72 "
+              className="textarea  textarea-bordered textarea-md min-h-72 "
               placeholder=""
             ></textarea>
-            <button className="btn btn-sm btn-accent mt-5 ">submit</button>
-            <button className="btn btn-sm btn-accent btn-circle btn-ghost absolute right-2 top-2">
+            <button className="btn btn-accent btn-sm mt-5 ">submit</button>
+            <button className="btn btn-circle btn-ghost btn-accent btn-sm absolute right-2 top-2">
               ✕
             </button>
           </form>
