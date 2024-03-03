@@ -19,9 +19,9 @@ export default async function Page({ params: { locale } }: HomeProps) {
       {/* <button className="btn btn-primary">Button</button> */}
 
       <div className="pt-5">
-        <div className="hero max-w-sm">
+        <div className="hero w-screen">
           <div className="hero-content flex-col lg:flex-row">
-            <img src="static/images/1.jpeg" className=" max-w-sm rounded-lg shadow-2xl" />
+            <img src="static/images/1.jpeg" className=" rounded-lg shadow-2xl" />
             <div className="">
               <p>{t('message1')}</p>
               <p>{t('message2')}</p>
