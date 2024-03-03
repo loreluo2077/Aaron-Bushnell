@@ -19,7 +19,7 @@ export default async function Page({ params: { locale } }: HomeProps) {
       {/* <button className="btn btn-primary">Button</button> */}
 
       <div className="pt-5">
-        <div className="hero w-screen">
+        {/* <div className="hero w-screen">
           <div className="hero-content flex-col lg:flex-row">
             <img src="static/images/1.jpeg" className=" rounded-lg shadow-2xl" />
             <div className="">
@@ -27,7 +27,7 @@ export default async function Page({ params: { locale } }: HomeProps) {
               <p>{t('message2')}</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* <div className="">介绍</div> */}
       <div className="-mt-15 mx-auto">

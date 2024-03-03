@@ -2,7 +2,9 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 
 import { Space_Grotesk } from 'next/font/google'
-import { Analytics, AnalyticsConfig } from 'pliny/analytics'
+// import { Analytics, AnalyticsConfig } from 'pliny/analytics'
+import { Analytics } from '@vercel/analytics/react'
+
 import { SearchProvider } from '@/components/search/SearchProvider'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
@@ -13,6 +15,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import { dir } from 'i18next'
 import { LocaleTypes, locales } from './i18n/settings'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import TwSizeIndicator from '@/components/helper/TwSizeIndicator'
 
 export async function generateStaticParams() {
@@ -100,6 +103,9 @@ export default function RootLayout({
           {/* <SearchProvider> */}
           <Header />
           <main className="mb-auto">{children}</main>
+          <SpeedInsights />
+          <Analytics />
+
           {/* </SearchProvider> */}
           {/* <Footer /> */}
         </div>
