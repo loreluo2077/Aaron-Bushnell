@@ -19,15 +19,15 @@ export default async function Page({ params: { locale } }: HomeProps) {
       {/* <button className="btn btn-primary">Button</button> */}
 
       <div className="pt-5">
-        {/* <div className="hero w-screen">
+        <div className="bg-base-200">
           <div className="hero-content flex-col lg:flex-row">
-            <img src="static/images/1.jpeg" className=" rounded-lg shadow-2xl" />
+            <img src="static/images/1.jpeg" className="max-w-sm rounded-lg shadow-2xl" />
             <div className="">
               <p>{t('message1')}</p>
               <p>{t('message2')}</p>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
       {/* <div className="">介绍</div> */}
       <div className="-mt-15 mx-auto">
@@ -39,17 +39,17 @@ export default async function Page({ params: { locale } }: HomeProps) {
       <div className="m-auto flex justify-center">
         <Stat view="100K" light={'80k'} commemorate={'10k'} />
       </div>
-      <div className="m-auto ">
+      {/* <div className="m-auto ">
         <TextCarousel
           texts={[
             'n extreme act of protest but, compared to what people havebeen experiencing in Palestine at the hands of their colonizers, its not extreme atall. This is what our ruling class has deci',
             '2333222222222222333333334',
           ]}
         />
-      </div>
-      <div className="m-auto">
+      </div> */}
+      {/* <div className="m-auto">
         <Commemorate />
-      </div>
+      </div> */}
 
       <div className="m-auto ">
         <Share title={'11'} slug={'22'} />

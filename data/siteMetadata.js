@@ -6,8 +6,8 @@ const siteMetadata = {
   description: 'IN MEMORY OF AARON BUSHNELL',
   language: 'en',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog-i18n.vercel.app',
-  siteRepo: 'https://github.com/PxlSyl/tailwind-nextjs-starter-blog-i18n',
+  siteUrl: 'https://www.aaronbushnell.top',
+  siteRepo: 'https://github.com/loreluo2077/Aaron-Bushnell',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
