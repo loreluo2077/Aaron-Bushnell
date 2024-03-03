@@ -10,7 +10,7 @@ type StatProps = {
 export default function Stat({ view, light, commemorate }: StatProps) {
   return (
     <>
-      <div className="stats shadow">
+      <div className="stats stats-vertical lg:stats-horizontal shadow">
         <div className="stat place-items-center">
           <div className="stat-title">View</div>
           <div className="stat-value">{view}</div>

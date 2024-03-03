@@ -18,10 +18,10 @@ export default async function Page({ params: { locale } }: HomeProps) {
     <div className="flex h-screen flex-col items-start">
       {/* <button className="btn btn-primary">Button</button> */}
 
-      <div className="">
+      <div className="pt-5">
         <div className="hero ">
-          <div className="hero-content  flex-col lg:flex-row">
-            <img src="static/images/1.jpeg" className="max-w-sm rounded-lg shadow-2xl" />
+          <div className="hero-content flex-col lg:flex-row">
+            <img src="static/images/1.jpeg" className=" max-w-sm rounded-lg shadow-2xl" />
             <div className="">
               <p>{t('message1')}</p>
               <p>{t('message2')}</p>

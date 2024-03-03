@@ -91,19 +91,19 @@ export default function RootLayout({
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       {/* <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
-      <body className=" ">
+      <body className="container m-auto">
         {/* <TwSizeIndicator /> */}
         {/* <ThemeProviders> */}
         {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
-        <SectionContainer>
-          <div className="flex h-screen flex-col justify-between font-sans">
-            {/* <SearchProvider> */}
-            <Header />
-            <main className="mb-auto">{children}</main>
-            {/* </SearchProvider> */}
-            {/* <Footer /> */}
-          </div>
-        </SectionContainer>
+        {/* <SectionContainer> */}
+        <div className="max-w-screen flex h-screen  flex-col justify-between font-sans">
+          {/* <SearchProvider> */}
+          <Header />
+          <main className="mb-auto">{children}</main>
+          {/* </SearchProvider> */}
+          {/* <Footer /> */}
+        </div>
+        {/* </SectionContainer> */}
         {/* </ThemeProviders> */}
       </body>
     </html>
