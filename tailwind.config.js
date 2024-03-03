@@ -12,6 +12,9 @@ module.exports = {
     './layouts/**/*.{js,ts,tsx}',
     './data/**/*.mdx',
   ],
+  daisyui: {
+    themes: ['light', 'dark', 'cupcake'],
+  },
   darkMode: 'class',
   theme: {
     extend: {
@@ -67,5 +70,5 @@ module.exports = {
       }),
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('daisyui')],
 }

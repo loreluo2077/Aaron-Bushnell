@@ -80,6 +80,7 @@ export default function RootLayout({
       dir={dir(locale)}
       className={`${space_grotesk.variable} scroll-smooth`}
       suppressHydrationWarning
+      data-theme="dark"
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png" />
@@ -89,21 +90,21 @@ export default function RootLayout({
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+      {/* <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
+      <body className=" ">
         {/* <TwSizeIndicator /> */}
-        <ThemeProviders>
-          {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
-          <SectionContainer>
-            <div className="flex h-screen flex-col justify-between font-sans">
-              {/* <SearchProvider> */}
-              <Header />
-              <main className="mb-auto">{children}</main>
-              {/* </SearchProvider> */}
-              {/* <Footer /> */}
-            </div>
-          </SectionContainer>
-        </ThemeProviders>
+        {/* <ThemeProviders> */}
+        {/* <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} /> */}
+        <SectionContainer>
+          <div className="flex h-screen flex-col justify-between font-sans">
+            {/* <SearchProvider> */}
+            <Header />
+            <main className="mb-auto">{children}</main>
+            {/* </SearchProvider> */}
+            {/* <Footer /> */}
+          </div>
+        </SectionContainer>
+        {/* </ThemeProviders> */}
       </body>
     </html>
   )

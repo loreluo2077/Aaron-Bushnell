@@ -19,6 +19,7 @@
     "@waline/client": "^3.0.0-alpha.11",
     "autoprefixer": "^10.4.17",
     "contentlayer": "0.3.4",
+    "daisyui": "^4.7.2",
     "esbuild": "0.19.11",
     "framer-motion": "^10.18.0",
     "github-slugger": "^2.0.0",
@@ -47,6 +48,7 @@
     "remark": "^15.0.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
+    "swiper": "^11.0.7",
     "tailwindcss": "^3.4.1",
     "unist-util-visit": "^5.0.0",
     "zustand": "^4.5.0"

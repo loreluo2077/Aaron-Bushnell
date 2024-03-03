@@ -26,7 +26,7 @@ const Header = () => {
             <div className="flex items-center justify-between">
               <div className="mr-3">{/* <Logo /> */}</div>
               {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="hidden h-6 text-2xl font-semibold sm:block">
+                <div className=" h-6 text-2xl font-semibold sm:block">
                   {siteMetadata.headerTitle}
                 </div>
               ) : (
@@ -41,13 +41,7 @@ const Header = () => {
             .map((link) => {
               const isSelected = pathname.includes(link.href)
               return (
-                <Link
-                  key={link.title}
-                  href={`/${locale}${link.href}`}
-                  className={`hidden font-medium ${
-                    isSelected ? 'text-primary-500' : 'text-gray-900 dark:text-gray-100'
-                  }  sm:block`}
-                >
+                <Link key={link.title} href={`/${locale}${link.href}`}>
                   {t(`${link.title.toLowerCase()}`)}
                 </Link>
               )
@@ -55,7 +49,7 @@ const Header = () => {
           {/* <SearchButton /> */}
           {/* <ThemeSwitch /> */}
           <LangSwitch />
-          <MobileNav />
+          {/* <MobileNav /> */}
         </div>
       </div>
     </header>
