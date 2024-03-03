@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Igniting Hope: In Memory of Aaron Bushnell',
   author: 'Tails Azimuth',
   headerTitle: 'IN MEMORY OF AARON BUSHNELL',
-  description: 'A blog created with Next.js, i18n and Tailwind.css',
+  description: 'IN MEMORY OF AARON BUSHNELL',
   language: 'en',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog-i18n.vercel.app',
