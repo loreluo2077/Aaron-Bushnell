@@ -21,7 +21,10 @@ export default async function Page({ params: { locale } }: HomeProps) {
       <div className="pt-5">
         <div className="bg-base-200">
           <div className="hero-content flex-col lg:flex-row">
-            <img src="static/images/1.jpeg" className="max-w-sm rounded-lg shadow-2xl" />
+            <div className="w-10/12">
+              <img src="static/images/1.jpeg" className="w-full rounded-lg shadow-2xl" />
+            </div>
+
             <div className="">
               <p>{t('message1')}</p>
               <p>{t('message2')}</p>
