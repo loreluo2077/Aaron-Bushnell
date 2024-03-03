@@ -1,4 +1,5 @@
 const fallbackLng = 'en'
-const secondLng = 'fr'
+// const secondLng = 'fr'
+const zhLng = 'zh'
 
-module.exports = { fallbackLng, secondLng }
+module.exports = { fallbackLng, zhLng }

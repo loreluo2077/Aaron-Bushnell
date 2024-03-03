@@ -18,7 +18,7 @@ export default function Stat({ view, light, commemorate }: StatProps) {
 
         <div className="stat place-items-center">
           <div className="stat-title">Ignited</div>
-          <div className="stat-value text-secondary">{light}</div>
+          <div className="stat-value text-orange-200">{light}</div>
         </div>
 
         <div className="stat place-items-center">
