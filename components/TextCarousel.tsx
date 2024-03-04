@@ -2,21 +2,31 @@
 
 import React, { useState } from 'react'
 
-interface TextCarouselProps {
-  texts: string[]
+interface Commemorate {
+  creator: string
+  create_time: string
+  id: number
+  lang: string
+  content: string
 }
 
-const TextCarousel: React.FC<TextCarouselProps> = ({ texts }) => {
+interface TextCarouselProps {
+  commemorates: Commemorate[]
+}
+
+const TextCarousel: React.FC<TextCarouselProps> = ({ commemorates }) => {
+  console.log('--------' + commemorates)
+
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const goToPrevious = () => {
     const isFirstText = currentIndex === 0
-    const newIndex = isFirstText ? texts.length - 1 : currentIndex - 1
+    const newIndex = isFirstText ? commemorates.length - 1 : currentIndex - 1
     setCurrentIndex(newIndex)
   }
 
   const goToNext = () => {
-    const isLastText = currentIndex === texts.length - 1
+    const isLastText = currentIndex === commemorates.length - 1
     const newIndex = isLastText ? 0 : currentIndex + 1
     setCurrentIndex(newIndex)
   }
@@ -32,7 +42,7 @@ const TextCarousel: React.FC<TextCarouselProps> = ({ texts }) => {
 
         <div className="card bg-base-100  shadow-xl">
           <div className="card-body">
-            <p>{texts[currentIndex]}</p>
+            <p>{commemorates[currentIndex].content}</p>
           </div>
         </div>
         <div className="flex flex-col justify-center">

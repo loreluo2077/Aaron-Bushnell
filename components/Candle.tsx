@@ -6,6 +6,11 @@ interface CandleProps {
   flame: boolean
   size: number
 }
+// 增加页面的点亮数
+async function incrementPageLight() {
+  // 上报页面查看数到后台API
+  await fetch('http://www.loreluo.com/light/increaseLightNum')
+}
 
 const Candle: React.FC<CandleProps> = ({ flame, size }) => {
   const [isLight, setLight] = useState(flame)
@@ -16,6 +21,7 @@ const Candle: React.FC<CandleProps> = ({ flame, size }) => {
       style={{ transform: `scale(${size})`, transformOrigin: 'center' }}
       onClick={() => {
         setLight(true)
+        incrementPageLight()
       }}
     >
       <div className="container ">

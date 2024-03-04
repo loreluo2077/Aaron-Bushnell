@@ -7,13 +7,29 @@ import TextCarousel from '@/components/TextCarousel'
 import Share from '@/components/Share'
 import Commemorate from '@/components/Commemorate'
 
+async function getData() {
+  const res = await fetch('http://www.loreluo.com/light/queryInfo', { cache: 'no-store' })
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+}
+
+// 增加页面的查看数
+function incrementPageViews() {
+  // 上报页面查看数到后台API
+  fetch('http://www.loreluo.com/light/increaseViewNum')
+}
+
 type HomeProps = {
   params: { locale: LocaleTypes }
 }
 
 export default async function Page({ params: { locale } }: HomeProps) {
   const { t } = await createTranslation(locale, 'all')
-
+  const value = await getData()
+  console.log('data:' + JSON.stringify(value))
+  incrementPageViews()
   return (
     <div className="flex h-screen flex-col items-start">
       {/* <button className="btn btn-primary">Button</button> */}
@@ -40,16 +56,15 @@ export default async function Page({ params: { locale } }: HomeProps) {
         <p>{t('lightCandle')}</p>
       </div>
       <div className="m-auto flex justify-center">
-        <Stat view="100K" light={'80k'} commemorate={'10k'} />
-      </div>
-      {/* <div className="m-auto ">
-        <TextCarousel
-          texts={[
-            'n extreme act of protest but, compared to what people havebeen experiencing in Palestine at the hands of their colonizers, its not extreme atall. This is what our ruling class has deci',
-            '2333222222222222333333334',
-          ]}
+        <Stat
+          view={value.data.lightInfo.view_num}
+          light={value.data.lightInfo.light_num}
+          commemorate={value.data.lightInfo.commemorate_num}
         />
-      </div> */}
+      </div>
+      <div className="m-auto ">
+        <TextCarousel commemorates={value.data.commemorates} />
+      </div>
       {/* <div className="m-auto">
         <Commemorate />
       </div> */}
