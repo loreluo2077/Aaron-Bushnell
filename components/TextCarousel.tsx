@@ -43,6 +43,7 @@ const TextCarousel: React.FC<TextCarouselProps> = ({ commemorates }) => {
         <div className="card bg-base-100  shadow-xl">
           <div className="card-body">
             <p>{commemorates[currentIndex].content}</p>
+            <p className="text-right">- {commemorates[currentIndex].creator}</p>
           </div>
         </div>
         <div className="flex flex-col justify-center">

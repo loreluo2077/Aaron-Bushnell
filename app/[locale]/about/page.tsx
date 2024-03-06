@@ -10,16 +10,18 @@ export default async function Page({ params: { locale } }: AboutProps) {
 
   return (
     <div className="container prose mx-auto mt-10 px-4">
-      <h3>{t('about1')} </h3>
+      <p>{t('about1')} </p>
       <p>{t('about2')}</p>
       <p>{t('about3')}</p>
-      <p>{t('about4')}</p>
-      <p>{t('about5')}</p>
 
-      <div className="container prose mx-auto mt-20 px-4"></div>
-      <footer className="footer footer-center rounded bg-base-200 p-10 text-base-content">
+      <p className="pt-10">{t('about4')}</p>
+      <p>{t('about5')}</p>
+      <p>{t('about6')}</p>
+
+      <div className="container prose mx-auto"></div>
+      <footer className="footer footer-center rounded bg-base-200  text-base-content">
         <aside>
-          <p>Copyright © 2024 - {t('about6')}</p>
+          <p>Copyright © 2024 - {t('ps')}</p>
         </aside>
       </footer>
     </div>

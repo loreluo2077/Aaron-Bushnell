@@ -43,7 +43,7 @@ export default async function Page({ params: { locale } }: HomeProps) {
 
             <div className="">
               <p>{t('message1')}</p>
-              <p>{t('message2')}</p>
+              {/* <p>{t('message2')}</p> */}
             </div>
           </div>
         </div>
@@ -65,9 +65,9 @@ export default async function Page({ params: { locale } }: HomeProps) {
       <div className="m-auto ">
         <TextCarousel commemorates={value.data.commemorates} />
       </div>
-      {/* <div className="m-auto">
+      <div className="m-auto">
         <Commemorate />
-      </div> */}
+      </div>
 
       <div className="m-auto ">
         <Share title={'11'} slug={'22'} />
