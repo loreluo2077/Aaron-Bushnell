@@ -10,7 +10,7 @@ interface CandleProps {
 async function incrementPageLight() {
   // 上报页面查看数到后台API
   const time= Date.parse(new Date().toString())
-  await fetch('/api/light?time='+time,{method:'GET'})
+  await fetch('/api/light?time='+time,{method:'GET', cache: 'no-store' })
 }
 
 const Candle: React.FC<CandleProps> = ({ flame, size }) => {
@@ -21,8 +21,10 @@ const Candle: React.FC<CandleProps> = ({ flame, size }) => {
       className=""
       style={{ transform: `scale(${size})`, transformOrigin: 'center' }}
       onClick={() => {
+        if(!isLight){
+          incrementPageLight()
+        }
         setLight(true)
-        incrementPageLight()
       }}
     >
       <div className="container ">
