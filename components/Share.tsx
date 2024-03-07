@@ -48,7 +48,7 @@ const Share = ({ title, description, slug, className }: ShareProps) => {
               kind="twitter"
               size={5}
               aria-label={t('twittershare')}
-              href={`https://twitter.com/intent/tweet/?url=${siteMetadata.siteUrl}/${locale}&text=${title}`}
+              href={`https://twitter.com/intent/tweet/?url=${siteMetadata.siteUrl}/${locale}`}
             />
           </li>
           <li className="ml-4 inline-block">
@@ -64,7 +64,7 @@ const Share = ({ title, description, slug, className }: ShareProps) => {
               kind="linkedin"
               size={5}
               aria-label={t('linkedinshare')}
-              href={`https://www.linkedin.com/shareArticle?mini=true&url=${siteMetadata.siteUrl}/${locale}&title=${title}&summary=${description}&source=${siteMetadata.siteUrl}`}
+              href={`https://www.linkedin.com/shareArticle?mini=true&url=${siteMetadata.siteUrl}/${locale}&source=${siteMetadata.siteUrl}`}
             />
           </li>
           <li className="ml-4 inline-block">
@@ -72,7 +72,7 @@ const Share = ({ title, description, slug, className }: ShareProps) => {
               kind="whatsapp"
               size={5}
               aria-label={t('whatsappshare')}
-              href={`https://wa.me/?text=${siteMetadata.siteUrl}/${locale}&text=${title}`}
+              href={`https://wa.me/?text=${siteMetadata.siteUrl}/${locale}`}
             />
           </li>
           <li className="ml-4 inline-block">
@@ -80,7 +80,7 @@ const Share = ({ title, description, slug, className }: ShareProps) => {
               kind="telegram"
               size={5}
               aria-label={t('telegramshare')}
-              href={`https://telegram.me/share/url?url=${siteMetadata.siteUrl}/${locale}&text=${title}`}
+              href={`https://telegram.me/share/url?url=${siteMetadata.siteUrl}/${locale}`}
             />
           </li>
         </ul>

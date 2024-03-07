@@ -20,7 +20,7 @@ export default function Commemorate() {
     data.lang = locale
     console.log(data)
     closeModal()
-    fetch('//www.loreluo.com/light/saveCommemorate', {
+    fetch('/api/comme', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
