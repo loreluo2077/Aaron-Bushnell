@@ -9,7 +9,7 @@ interface CandleProps {
 // 增加页面的点亮数
 async function incrementPageLight() {
   // 上报页面查看数到后台API
-  await fetch('http://www.loreluo.com/light/increaseLightNum')
+  await fetch('http://www.loreluo.com/light/increaseLightNum',{method:'GET',mode:'cors'})
 }
 
 const Candle: React.FC<CandleProps> = ({ flame, size }) => {
