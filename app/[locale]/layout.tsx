@@ -93,6 +93,7 @@ export default function RootLayout({
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+      <meta name="google-site-verification" content="RBlZmLxw3PRSIx4sP3FKry9VY1l2EEGrTL-Kbyn8Apw" />
       {/* <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
       <body className="container m-auto">
         {/* <TwSizeIndicator /> */}
