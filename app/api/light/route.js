@@ -1,7 +1,6 @@
 export async function GET() {
 
 
-  fetch('http://www.loreluo.com/light/increaseLightNum',{method:'GET',mode:'cors'})
+  return fetch('http://www.loreluo.com/light/increaseLightNum',{method:'GET'})
 
-  return Response.json({state:'ok'})
 }

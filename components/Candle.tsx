@@ -9,7 +9,8 @@ interface CandleProps {
 // 增加页面的点亮数
 async function incrementPageLight() {
   // 上报页面查看数到后台API
-  await fetch('/api/light')
+  const time= Date.parse(new Date().toString())
+  await fetch('/api/light?time='+time,{method:'GET'})
 }
 
 const Candle: React.FC<CandleProps> = ({ flame, size }) => {
